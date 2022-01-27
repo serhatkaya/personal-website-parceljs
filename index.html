@@ -1,62 +1,160 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Serhat KAYA</title>
-    <meta charset="UTF-8" />
-    <link
-      rel="stylesheet"
-      href="./node_modules/terminal.css/dist/terminal.min.css"
-    />
-    <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css" />
+    <head>
+        <title>Serhat KAYA</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./node_modules/terminal.css/dist/terminal.min.css" />
+        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css" />
+        <link rel="stylesheet" href="./src/styles/styles.scss" />
+        <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css" />
+    </head>
 
-    <link rel="stylesheet" href="./src/base.scss" />
-    <link rel="stylesheet" href="./src/styles.scss" />
-  </head>
+    <body class="terminal">
+        <div class="container">
+            <div class="terminal-nav">
+                <header class="terminal-logo">
+                    <div class="logo terminal-prompt"
+                        ><a href="https://serhatkaya.com.tr" class="no-style">Serhat KAYA</a>
+                    </div>
+                </header>
+                <nav class="terminal-menu">
+                    <ul vocab="https://schema.org/" id="nav-menu" typeof="BreadcrumbList">
+                        <li>
+                            <a href="" class="menu-item" data-route="about">
+                                <span>About</span>
+                            </a>
+                            <meta property="position" />
+                        </li>
+                        <li property="itemListElement" typeof="ListItem">
+                            <a
+                                data-route="resume"
+                                href=""
+                                property="item"
+                                typeof="WebPage"
+                                class="menu-item"
+                            >
+                                <span property="name">Resume</span>
+                            </a>
+                            <meta property="position" content="1" />
+                        </li>
+                        <li property="itemListElement" typeof="ListItem">
+                            <a href="" property="item" typeof="WebPage" class="menu-item">
+                                <span property="name">Projects</span>
+                            </a>
+                            <meta property="position" content="2" />
+                        </li>
+                        <li property="itemListElement" typeof="ListItem">
+                            <a href="" property="item" typeof="WebPage" class="menu-item">
+                                <span property="name">Contact</span>
+                            </a>
+                            <meta property="position" content="3" />
+                        </li>
+                        <li property="itemListElement" typeof="ListItem">
+                            <a href="" property="item" typeof="WebPage" class="menu-item">
+                                <span property="name">Blog</span>
+                            </a>
+                            <meta property="position" content="3" />
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="container content">
+            <section id="about">
+                <fieldset>
+                    <legend>About</legend>
+                    <div id="intro">
+                        <div class="image-container">
+                            <img src="./src/assets/profile.png" class="profile-img" />
+                        </div>
+                        <div class="intro-info-box">
+                            <ul>
+                                <li>Serhat KAYA</li>
+                                <li>IZMIR / TURKEY</li>
+                                <li>Software Developer</li>
+                                <li style="display: flex"
+                                    >Language
+                                    <img width="16" height="16" src="./src/assets/tr.svg" />
+                                    <img width="16" height="16" src="./src/assets/gb.svg" />
+                                </li>
+                            </ul>
+                        </div>
 
-  <body class="terminal">
-    <div class="container">
-      <div class="terminal-nav">
-        <header class="terminal-logo">
-          <div class="logo terminal-prompt">
-            <a href="https://serhatkaya.com.tr" class="no-style">Serhat KAYA</a>
-          </div>
-        </header>
-        <nav class="terminal-menu">
-          <ul vocab="https://schema.org/" typeof="BreadcrumbList">
-            <li>
-              <a href="https://terminalcss.xyz" class="menu-item"
-                ><span>About</span></a
-              ><meta property="position" />
-            </li>
-            <li property="itemListElement" typeof="ListItem">
-              <a
-                href=""
-                property="item"
-                typeof="WebPage"
-                class="menu-item active"
-                ><span property="name">Resume</span></a
-              ><meta property="position" content="1" />
-            </li>
-            <li property="itemListElement" typeof="ListItem">
-              <a href="" property="item" typeof="WebPage" class="menu-item"
-                ><span property="name">Projects</span></a
-              ><meta property="position" content="2" />
-            </li>
-            <li property="itemListElement" typeof="ListItem">
-              <a href="" property="item" typeof="WebPage" class="menu-item"
-                ><span property="name">Contact</span></a
-              ><meta property="position" content="3" />
-            </li>
-            <li property="itemListElement" typeof="ListItem">
-              <a href="" property="item" typeof="WebPage" class="menu-item"
-                ><span property="name">Blog</span></a
-              ><meta property="position" content="3" />
-            </li>
-            <li style="height: 28px"><span></span></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-    <div class="container"></div>
-  </body>
+                        <div class="intro-text"
+                            >Hello, I'm Serhat, I live in Izmir and I'm 24 years old. I graduated
+                            from Afyon Kocatepe University, Computer Programming. I had over one
+                            year of experience on software field. Being a software developer has
+                            always been a goal for me and here I am. I love learning new things
+                            programming languages, frameworks or non software related but what I
+                            interested in.
+                        </div>
+                    </div>
+                </fieldset>
+            </section>
+
+            <section id="experiences">
+                <fieldset>
+                    <legend>Experiences</legend>
+                    <div class="terminal-timeline">
+                        <div class="terminal-card">
+                            <header><b>IT Technician</b> - Plymouth Argyle Football Club</header>
+                            <div>
+                                <h5>March 2016, April 2016</h5>
+                                <p
+                                    >I went to United Kingdom with Erasmus+ program, I got a course
+                                    about business life and did practices.</p
+                                >
+                                I worked here as IT Technician but actually I developed a visitor
+                                tracking app with C# for desktop.
+                                <ul>
+                                    <li>
+                                        I had my chance to practice English with people from
+                                        different countries.
+                                    </li>
+                                    <li>I improved myself on Desktop Apps and C#.</li>
+                                    <li>I had my chance to practice working life.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="terminal-card">
+                            <header>
+                                <b>Fullstack Developer</b> - Amatis Software Engineering
+                            </header>
+                            <div>
+                                <h5>March 2021, January 2022</h5>
+                                <ul>
+                                    <li
+                                        >Technologies I used:
+                                        <ul>
+                                            <li>Angular Framework</li>
+                                            <li>.NETCore</li>
+                                            <li>MSSQL</li>
+                                            <li>RabbitMQ</li>
+                                            <li>Docker</li>
+                                            <li>MongoDB</li>
+                                        </ul>
+                                    </li>
+                                    <li>I developed frontend, backend for web applications.</li>
+                                    <li>I developed background services.</li>
+                                    <li>
+                                        Deployed applications and services on Linux server using
+                                        nginx and docker
+                                    </li>
+                                    <li> Configured CI / CD </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="terminal-card">
+                            <header> <b>Software Developer</b> - Emakina.TR</header>
+                            <div>
+                                <h5>January 2022, Present</h5>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </section>
+        </div>
+        <script src="src/index.js"></script>
+    </body>
 </html>
