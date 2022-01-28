@@ -5,9 +5,7 @@
         <meta charset="UTF-8" />
         <link rel="stylesheet" href="./node_modules/terminal.css/dist/terminal.min.css" />
         <link rel="shortcut icon" href="favicon.ico" />
-        <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css" />
         <link rel="stylesheet" href="./src/styles/styles.scss" />
-        <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css" />
     </head>
 
     <body class="terminal">
@@ -39,19 +37,37 @@
                             <meta property="position" content="1" />
                         </li>
                         <li property="itemListElement" typeof="ListItem">
-                            <a href="" property="item" typeof="WebPage" class="menu-item">
+                            <a
+                                href=""
+                                property="item"
+                                typeof="WebPage"
+                                class="menu-item"
+                                data-route="projects"
+                            >
                                 <span property="name">Projects</span>
                             </a>
                             <meta property="position" content="2" />
                         </li>
                         <li property="itemListElement" typeof="ListItem">
-                            <a href="" property="item" typeof="WebPage" class="menu-item">
+                            <a
+                                href=""
+                                property="item"
+                                typeof="WebPage"
+                                class="menu-item"
+                                data-route="contact"
+                            >
                                 <span property="name">Contact</span>
                             </a>
                             <meta property="position" content="3" />
                         </li>
                         <li property="itemListElement" typeof="ListItem">
-                            <a href="" property="item" typeof="WebPage" class="menu-item">
+                            <a
+                                href=""
+                                property="item"
+                                typeof="WebPage"
+                                class="menu-item"
+                                data-route="blog"
+                            >
                                 <span property="name">Blog</span>
                             </a>
                             <meta property="position" content="3" />
@@ -61,7 +77,7 @@
             </div>
         </div>
         <div class="container content">
-            <section id="about">
+            <section id="aboutSection">
                 <fieldset>
                     <legend>About</legend>
                     <div id="intro">
@@ -91,30 +107,23 @@
                         </div>
                     </div>
                 </fieldset>
-            </section>
+                <fieldset id="infoEduExp">
+                    <legend
+                        ><div class="btn-group">
+                            <button class="btn btn-default btn-ghost active" id="switch-edu"
+                                >Education</button
+                            >
 
-            <section id="experiences">
-                <fieldset>
-                    <legend>Experiences</legend>
-                    <div class="terminal-timeline">
+                            <button class="btn btn-default btn-ghost" id="switch-exp"
+                                >Experiences</button
+                            >
+                        </div></legend
+                    >
+                    <div class="terminal-timeline" id="experienceTab">
                         <div class="terminal-card">
-                            <header><b>IT Technician</b> - Plymouth Argyle Football Club</header>
+                            <header> <b>Software Developer</b> - Emakina.TR</header>
                             <div>
-                                <h5>March 2016, April 2016</h5>
-                                <p
-                                    >I went to United Kingdom with Erasmus+ program, I got a course
-                                    about business life and did practices.</p
-                                >
-                                I worked here as IT Technician but actually I developed a visitor
-                                tracking app with C# for desktop.
-                                <ul>
-                                    <li>
-                                        I had my chance to practice English with people from
-                                        different countries.
-                                    </li>
-                                    <li>I improved myself on Desktop Apps and C#.</li>
-                                    <li>I had my chance to practice working life.</li>
-                                </ul>
+                                <h5>January 2022, Present</h5>
                             </div>
                         </div>
                         <div class="terminal-card">
@@ -146,12 +155,99 @@
                             </div>
                         </div>
                         <div class="terminal-card">
-                            <header> <b>Software Developer</b> - Emakina.TR</header>
+                            <header><b>IT Technician</b> - Plymouth Argyle Football Club</header>
                             <div>
-                                <h5>January 2022, Present</h5>
+                                <h5>March 2016, April 2016</h5>
+                                <p
+                                    >I went to United Kingdom with Erasmus+ program, I got a course
+                                    about business life and did practices.</p
+                                >
+                                I worked here as IT Technician but actually I developed a visitor
+                                tracking app with C# for desktop.
+                                <ul>
+                                    <li>
+                                        I had my chance to practice English with people from
+                                        different countries.
+                                    </li>
+                                    <li>I improved myself on Desktop Apps and C#.</li>
+                                    <li>I had my chance to practice working life.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
+                    <section id="educationTab">
+                        <ul>
+                            <li class="edu-entry"
+                                >Gazeteci Çetin Altan Vocational and Technical Anatolian High School
+                                <ul>
+                                    <li>My branch was database programming in high school.</li>
+                                    <li>I learned about MSSQL, C#.</li>
+                                    <li>Completed my high school with<b> 84%</b>.</li>
+                                </ul></li
+                            >
+                            <li class="edu-entry">
+                                Afyon Kocatepe University, Computer Programming
+                                <ul>
+                                    <li>Completed my school with <b>3.09</b>.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </fieldset>
+            </section>
+            <section id="resumeSection">
+                <fieldset>
+                    <legend>Resume</legend>
+
+                    <object data="./src/assets/serhatkaya.pdf" id="resumePreview" type=""></object
+                ></fieldset>
+            </section>
+
+            <section id="contactSection">
+                <fieldset>
+                    <legend>Information</legend>
+                    <ul>
+                        <li>Email: serhatkaya.sr@gmail.com</li>
+                        <li>Secondary email: root@serhatkaya.com.tr</li>
+                    </ul>
+                    <small>You can also send a message by using form below.</small>
+                </fieldset>
+                <fieldset>
+                    <legend>Contact</legend>
+                    <form action="#" id="contactForm">
+                        <div class="form-group">
+                            <label for="_replyto">Email:</label>
+                            <input
+                                id="_replyto"
+                                name="_replyto"
+                                type="email"
+                                required=""
+                                minlength="5"
+                                placeholder="your email address"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea
+                                id="message"
+                                cols="30"
+                                rows="5"
+                                name="message"
+                                placeholder="your message"
+                            ></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button
+                                class="btn btn-default"
+                                type="submit"
+                                role="button"
+                                name="submit"
+                                id="submit"
+                                >Submit</button
+                            >
+                        </div>
+                    </form>
                 </fieldset>
             </section>
         </div>

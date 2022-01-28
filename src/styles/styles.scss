@@ -1,9 +1,13 @@
-@import url('./base.scss');
+@import 'base.scss';
 @import 'variables';
-@import 'animations.scss';
+@import '_modal.scss';
 html,
 body {
     font-family: sans-serif;
+}
+
+html {
+    overflow-y: scroll;
 }
 
 #intro {
@@ -38,21 +42,71 @@ body {
     }
 }
 
-$margin-between-sections: 1.3rem;
+$margin-between-fieldsets: 1.3rem;
 
-section:not(:first-child):not(:last-child) {
-    margin-top: $margin-between-sections;
-    margin-bottom: $margin-between-sections;
+fieldset:not(:first-child):not(:last-child) {
+    margin-top: $margin-between-fieldsets;
+    margin-bottom: $margin-between-fieldsets;
 }
 
-section:not(:first-child) {
-    margin-top: $margin-between-sections;
+fieldset:not(:first-child) {
+    margin-top: $margin-between-fieldsets;
 }
 
-section:last-child {
-    margin-top: $margin-between-sections;
+fieldset:last-child:not(:first-child) {
+    margin-top: $margin-between-fieldsets;
+}
+$margin-between-uls: 1rem;
+
+#educationTab {
+    .edu-entry:not(:first-child):not(:last-child) {
+        margin-top: $margin-between-uls;
+        margin-bottom: $margin-between-uls;
+    }
+
+    .edu-entry:not(:first-child) {
+        margin-top: $margin-between-uls;
+    }
+
+    .edu-entry:last-child:not(:first-child) {
+        margin-top: $margin-between-fieldsets;
+    }
 }
 
-#terminalContent {
+nav {
+    ul a:before,
+    p a:before {
+        color: #00dd00;
+        content: ' [ ';
+    }
+
+    ul a:after,
+    p a:after {
+        color: #00dd00;
+        content: ' ] ';
+    }
+
+    .active a {
+        background: 0 0;
+        color: inherit !important;
+    }
+}
+
+#infoEduExp {
+    button.active {
+        border-color: $primary-color;
+        color: var(--secondary-color);
+        z-index: 2;
+    }
+}
+#aboutSection,
+#experienceTab,
+#contactSection,
+#resumeSection {
     display: none;
+}
+
+#resumePreview {
+    width: 100%;
+    height: calc(100vh - 120px);
 }
