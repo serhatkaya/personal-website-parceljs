@@ -10,15 +10,16 @@ var switchEdu = $('#switch-edu');
 var switchExp = $('#switch-exp');
 var contactForm = $('form');
 var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+
 var routes = [
     {
         route: 'about',
         container: $('#aboutSection')
     },
-    {
-        route: 'resume',
-        container: $('#resumeSection')
-    },
+    // {
+    //     route: 'resume',
+    //     container: $('#resumeSection')
+    // },
     {
         route: 'projects',
         container: $('#projectsSection')
@@ -26,11 +27,11 @@ var routes = [
     {
         route: 'contact',
         container: $('#contactSection')
-    },
-    {
-        route: 'blog',
-        container: $('#blogSection')
     }
+    // {
+    //     route: 'blog',
+    //     container: $('#blogSection')
+    // }
 ];
 $(function () {
     contactForm.on('submit', function (e) {
@@ -92,20 +93,23 @@ $(function () {
 
     navMenuItems.each((i, nav) => {
         $(nav).on('click', function (event) {
-            event.preventDefault();
-            const clickedItem = $(event.currentTarget).attr('data-route').trim().toLowerCase();
-            const a = routes.find(r => r.route == clickedItem);
+            const isRoute = $(event.currentTarget).attr('data-route') != null ? true : false;
+            if (isRoute) {
+                event.preventDefault();
+                const clickedItem = $(event.currentTarget).attr('data-route').trim().toLowerCase();
+                const a = routes.find(r => r.route == clickedItem);
 
-            routes
-                .filter(r => r.route != clickedItem)
-                .forEach(function (i, r) {
-                    if (i.container) i.container.hide();
-                });
+                routes
+                    .filter(r => r.route != clickedItem)
+                    .forEach(function (i, r) {
+                        if (i.container) i.container.hide();
+                    });
 
-            a.container.show();
-            window.location.href = '/#' + a.route;
-            navMenuItems.each((i, nav) => nav.classList.remove('active'));
-            nav.classList.add('active');
+                a.container.show();
+                window.location.href = '/#' + a.route;
+                navMenuItems.each((i, nav) => nav.classList.remove('active'));
+                nav.classList.add('active');
+            }
         });
     });
 });
